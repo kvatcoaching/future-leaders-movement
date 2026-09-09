@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #1A1512;
+  --charcoal: #3D362F;
+  --ember: #D9560F;
+  --ember-light: #F2924D;
+  --cream: #F7EFE6;
+  --paper: #FFFDFB;
+  --line: #E8DBC9;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--charcoal);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--ink);
+  line-height: 1.1;
+  margin: 0 0 0.6em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+
+p { margin: 0 0 1.1em; max-width: 66ch; }
+
+a { color: var(--ember); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+
+ul { padding-left: 1.2em; max-width: 66ch; }
+li { margin-bottom: 0.5em; }
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.9rem 2rem;
+  background: var(--ink);
+  flex-wrap: wrap;
+  border-bottom: 5px solid var(--ember);
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--paper);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wordmark:hover { text-decoration: none; }
+.wordmark img { height: 34px; width: auto; display: block; }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.3rem;
+}
+
+.site-nav a {
+  color: #DCD3C7;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ember-light);
+  font-weight: 700;
+}
+
+.site-nav a:hover { color: var(--ember-light); text-decoration: none; }
+
+/* Hero */
+.hero {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-grid.reverse { grid-template-columns: 0.9fr 1.1fr; }
+.hero-grid.reverse .hero-text { order: 2; }
+.hero-grid.reverse .hero-media { order: 1; }
+
+@media (max-width: 780px) {
+  .hero-grid, .hero-grid.reverse { grid-template-columns: 1fr; }
+  .hero-grid.reverse .hero-text { order: 1; }
+  .hero-grid.reverse .hero-media { order: 2; }
+}
+
+.hero-logo {
+  display: block;
+  width: 140px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero.centered {
+  text-align: center;
+}
+.hero.centered p.lede { margin-left: auto; margin-right: auto; }
+
+.hero p.lede {
+  font-size: 1.15rem;
+  max-width: 56ch;
+}
+
+.hero-media {
+  position: relative;
+}
+.hero-media::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 100%;
+  height: 100%;
+  background: var(--ember);
+  z-index: 1;
+}
+.hero-media img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--ember);
+  color: var(--paper);
+  padding: 0.75em 1.6em;
+  border-radius: 2px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+  margin-top: 0.5em;
+}
+.btn:hover { background: var(--ink); text-decoration: none; }
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+}
+.btn-outline:hover { border-color: var(--ember); color: var(--ember); text-decoration: none; }
+
+/* Section bands */
+.section {
+  padding: 3.5rem 2rem;
+}
+.section.band-cream { background: var(--cream); }
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-inner.narrow { max-width: 700px; }
+
+.eyebrow {
+  color: var(--ember);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.4em;
+}
+
+/* Quotes / testimonials */
+blockquote {
+  border-left: 3px solid var(--ember);
+  margin: 0 0 1.8rem;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  max-width: 62ch;
+}
+blockquote p { font-style: italic; margin-bottom: 0.4em; }
+blockquote cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+/* Steps */
+.steps {
+  list-style: none;
+  padding: 0;
+  counter-reset: step;
+  max-width: 66ch;
+}
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.6em;
+  margin-bottom: 1.3em;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  background: var(--ember);
+  color: var(--paper);
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Involvement / audience grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+}
+.grid-item {
+  border-top: 4px solid var(--ember);
+  padding-top: 1rem;
+}
+
+/* Inline content images (secondary photos within a section) */
+.section-image {
+  border-top: 4px solid var(--ember);
+  margin: 1.8rem 0;
+  max-width: 640px;
+}
+.section-image img {
+  display: block;
+  width: 100%;
+}
+.section-image figcaption {
+  font-size: 0.82rem;
+  color: var(--charcoal);
+  margin-top: 0.5em;
+}
+
+/* Photographer credits list */
+.credit-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+}
+.credit-list li {
+  border-top: 1px solid var(--line);
+  padding-top: 0.7em;
+}
+.credit-list .name { font-weight: 600; color: var(--ink); }
+
+/* FAQ */
+.faq dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 1.3em;
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.05rem;
+}
+.faq dd { margin: 0.3em 0 0; max-width: 66ch; }
+
+/* Footer */
+.site-footer {
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  background: var(--ink);
+  color: #DCD3C7;
+}
+.site-footer img { height: 40px; width: auto; margin-bottom: 1rem; }
+.site-footer a { color: var(--ember-light); }
+
+@media (max-width: 640px) {
+  .site-header { padding: 1rem 1.2rem; }
+  .hero, .section { padding-left: 1.2rem; padding-right: 1.2rem; }
+}
