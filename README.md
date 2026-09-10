@@ -5,9 +5,8 @@ Plain HTML/CSS site, no build tools required.
 ## Files
 - `index.html` — Home
 - `our-story.html` — Our Story
-- `coaching-access.html` — Coaching Access
 - `for-companies.html` — For Companies & Nonprofits
-- `join-the-movement.html` — Join the Movement (Applicants)
+- `join-the-movement.html` — Join the Movement (includes coaching access details + application info)
 - `for-sponsors.html` — For Sponsors & Donors
 - `special-thanks.html` — Special Thanks
 - `terms.html` — Terms and Conditions

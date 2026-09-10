@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Special Thanks | Future Leaders Movement</title>
+<title>Contact Us | Future Leaders Movement</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,28 +17,43 @@
     <a href="for-companies.html">For Companies &amp; Nonprofits</a>
     <a href="join-the-movement.html">Join the Movement</a>
     <a href="for-sponsors.html">For Sponsors &amp; Donors</a>
-    <a href="contact.html">Contact</a>
-    <a href="special-thanks.html" aria-current="page">Special Thanks</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="special-thanks.html">Special Thanks</a>
     <a href="terms.html">Terms and Conditions</a>
   </nav>
 </header>
 
 <section class="hero centered">
   <img src="images/logo-full.png" alt="Future Leaders Movement" class="hero-logo">
-  <h1>Thank You</h1>
-  <p class="lede">We are deeply grateful to the following photographers for the beautiful photos they have made available. Their work brings our mission to life and helps us tell our story. Please take a moment to learn more about these talented artists and support their work.</p>
+  <h1>Contact Us</h1>
+  <p class="lede">Questions about coaching access, partnering with us, or giving? Send us a note and we'll get back to you.</p>
 </section>
 
 <section class="section">
-  <div class="section-inner">
-    <ul class="credit-list">
-      <li><span class="name">Kiana Bosman</span><br>@capturedby_kiana</li>
-      <li><span class="name">Joel Muniz</span><br>@jmuniz</li>
-      <li><span class="name">Akil Mazumder</span><br>@akil-photography</li>
-      <li><span class="name">Nathan Lemon</span><br>@processrepeat</li>
-      <li><span class="name">Freddy Kearney</span><br>@fredasem</li>
-      <li><span class="name">Christopher Ruel</span><br>@chrisruel</li>
-    </ul>
+  <div class="section-inner narrow">
+    <form class="contact-form" action="https://formsubmit.co/hello@futureleadersmovement.org" method="POST">
+      <input type="hidden" name="_subject" value="New message from futureleadersmovement.org">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://futureleadersmovement.org/contact-thanks.html">
+
+      <label>Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>What's this about?
+        <input type="text" name="subject" placeholder="e.g. Coaching access, Partnership, Donation">
+      </label>
+
+      <label>Message
+        <textarea name="message" required></textarea>
+      </label>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </div>
 </section>
 
